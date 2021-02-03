@@ -1,0 +1,130 @@
+html,
+body{
+  height: 100%;
+}
+
+body{
+  color: $default;
+  font-size: 18px;
+  line-height: 22px;
+  @extend %montserrat-400;
+}
+
+
+.container{
+  max-width: 1950px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.breadcrumbs{
+  text-align: center;
+  &__list{
+    padding: 22px 0;
+    display: inline-flex;
+  }
+  &__item{
+    font-size: 16px;
+    line-height: 20px;
+    position: relative;
+    padding-right: 20px;
+    &::after{
+      content: '/';
+      position: absolute;
+      right: 8px;
+      top: 0;
+    }
+    &:last-child{
+      @extend %montserrat-600;
+      padding-right: 0;
+      &::after{
+        display: none;
+      }
+    }
+  }
+  &__link{
+    color: inherit;
+  }
+  &__img-box{
+    position: relative;
+  }
+  &__img{
+    width: 100%;
+    object-fit: cover;
+  }
+  &__title{
+    font-size: 24px;
+    line-height: 28px;
+    @extend %montserrat-500;
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: $bg;
+    max-width: 244px;
+    width: 100%;
+    padding-top: 27px;
+  }
+}
+
+.blok-name{
+  position: absolute;
+  @extend %montserrat-500;
+  display: inline-flex;
+  left: -10px;
+  transform-origin: top left;
+  transform: rotate(-90deg) translateX(-100%);
+  &__box{
+    position: relative;
+  }
+  &__number{
+    margin-right: 85px;
+    position: relative;
+    &::after{
+      content: '';
+      position: absolute;
+      right: -70px;
+      bottom: 4px;
+      width: 55px;
+      height: 4px;
+      padding: 0 18px;
+      background-color: $accent;
+    }
+  }
+  &__title{
+    font-size: 18px;
+  }
+}
+
+.img-decor{
+  position: relative;
+  &::before{
+    content: '';
+    position: absolute;
+    top: -1px;
+    right: 0;
+    width: 42%;
+    height: 4px;
+    background-color: $accent;
+  }
+}
+
+.ibg{
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.title{
+  @extend %montserrat-500;
+  color: #e1e1e1;
+  font-size: 140px;
+  letter-spacing: 2px;
+  position: absolute;
+  right: -11px;
+  bottom: 18px;
+  z-index: -1;
+  &__box{
+    position: relative;
+  }
+}

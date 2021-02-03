@@ -3,6 +3,122 @@
 @import 'reset';
 @import 'global';
 
+.header{
+  padding: 20px 0 25px;
+  border-bottom: 1px solid #DCDCDC;
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
 
+.menu{
+  &__list{
+    display: flex;
+    padding-right: 14px;
+  }
+  &__list-item{
+    margin-right: 27px;
+  }
+  &__list-item:last-child{
+    margin-right: 0;
+  }
+  &__list-link{
+    color: $default;
+    padding-right: 15px;
+
+  }
+  &__list-link--active{
+    border-top: 4px solid $accent;
+  }
+}
+
+.about{
+  padding: 80px 0 52px;
+  background-color: $bg;
+  &__inner{
+    padding-left: 50px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__img-box{
+    margin-right: 25px;
+    flex: 0 1 34%;
+  }
+  &__content{
+    flex: 0 1 66%;
+  }
+  &__content-text{
+    margin-bottom: 15px;
+  }
+  &__content-text--accent{
+    @extend %montserrat-500;
+    color: $accent;
+  }
+  &__content-text--accent-bold{
+    @extend %montserrat-600;
+  }
+  &__content-text--bold{
+    @extend %montserrat-500;
+  }
+  &__content-box-img{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__content-img{
+    width: 100%;
+    object-fit: cover;
+    margin-right: 25px;
+  }
+  &__content-img:last-child{
+    margin-right: 0;
+  }
+}
+
+
+.advantages{
+  padding: 120px 0 119px;
+  &__items{
+    padding-left: 50px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__item{
+    flex: 0 1 33.33%;
+    &:nth-child(3){
+      .advantages__item-content{
+        border-right: 4px solid $accent;
+      }
+    }
+    &:nth-child(6){
+      .advantages__item-number{
+      border-right: 4px solid $accent;
+      }
+    }
+  }
+  &__item-number{
+    border-bottom: 4px solid $accent;
+    @extend %montserrat-500;
+    padding-bottom: 5px;
+  }
+  &__item-content{
+    padding-bottom: 50px;
+  }
+  &__item-title{
+    padding-top: 16px;
+    font-size: 21px;
+    line-height: 26px;
+    margin-bottom: 16px;
+    max-width: 85%;
+    @extend %montserrat-400;
+  }
+  &__item-number--uppercase{
+    text-transform: uppercase;
+  }
+  &__item-text{
+    max-width: 85%;
+  }
+}
 
 @import 'media';
