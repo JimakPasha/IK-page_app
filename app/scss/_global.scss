@@ -74,6 +74,9 @@ body{
   left: -10px;
   transform-origin: top left;
   transform: rotate(-90deg) translateX(-100%);
+  &--stages{
+    transform: rotate(-90deg) translateX(-140%);
+  }
   &__box{
     position: relative;
   }
@@ -117,7 +120,7 @@ body{
 
 .title{
   @extend %montserrat-500;
-  color: #e1e1e1;
+  color: #E4E4E4;
   font-size: 140px;
   letter-spacing: 2px;
   position: absolute;
@@ -127,4 +130,67 @@ body{
   &__box{
     position: relative;
   }
+}
+
+.slick-arrow{
+  font-size: 0;
+  border: none;
+  position: absolute;
+  background-color: transparent;
+  top: 136px;
+  cursor: pointer;
+  width: 0;
+  height: 0;
+  border-bottom: 10px solid transparent;
+  border-top: 10px solid transparent;
+}
+
+.slick-prev{
+  left: 87%;
+  border-right: 12px solid #656565;
+  &::before{
+    position: absolute;
+    content: '';
+    width: 3px;
+    height: 22px;
+    background-color: #f33632;
+    right: -19px;
+    bottom: -10px;
+    pointer-events: none;
+  }
+}
+
+.slick-next{
+  right: 9%;
+  border-left: 12px solid #656565;
+}
+
+
+.slick-prev.slick-disabled{
+  border-right: 12px solid rgba($color: #656565, $alpha: .5);
+}
+
+.slick-next.slick-disabled{
+  border-left: 12px solid rgba($color: #656565, $alpha: .5);
+}
+
+.slick-dots{
+  display: flex;
+  position: absolute;
+  bottom: -90px;
+  right: 9%;
+  border-top: 1px solid rgba($color: #656565, $alpha: .2);
+  font-size: 0;
+  & button{
+    border: none;
+    width: 60px;
+    height: 3px;
+    background-color: transparent;
+    transform: translateY(-1px);
+    transition: all .3s;
+  }
+}
+
+.slick-active button{
+  background-color: $accent;
 }
