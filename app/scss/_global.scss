@@ -44,6 +44,10 @@ body{
   }
   &__link{
     color: inherit;
+    outline: none;
+    &:focus{
+      text-shadow: 0 0 1px rgba(0, 0, 0, .4);
+    }
   }
   &__img-box{
     position: relative;
@@ -57,7 +61,7 @@ body{
     line-height: 28px;
     @extend %montserrat-500;
     position: absolute;
-    bottom: -1px;
+    bottom: -2px;
     left: 50%;
     transform: translateX(-50%);
     background-color: $bg;
@@ -145,6 +149,7 @@ body{
   font-size: 0;
   border: none;
   position: absolute;
+  z-index: 5;
   background-color: transparent;
   top: 136px;
   cursor: pointer;
@@ -157,7 +162,6 @@ body{
 .slick-prev{
   right: 136px;
   border-right: 12px solid #656565;
-  z-index: 5;
   &::before{
     position: absolute;
     content: '';

@@ -78,6 +78,14 @@
 
 .advantages{
   padding: 120px 0 119px;
+  &__title{
+    display: none;
+    margin-bottom: 60px;
+    padding-left: 25px;
+    font-size: 21px;
+    line-height: 24px;
+    @extend %montserrat-500;
+  }
   &__items{
     padding-left: 50px;
     display: flex;
@@ -103,6 +111,7 @@
   }
   &__item-content{
     padding-bottom: 50px;
+    height: 100%;
   }
   &__item-title{
     padding-top: 16px;
@@ -150,6 +159,58 @@
   }
 }
 
+.stages{
+  background-color: $bg;
+  padding: 115px 0 47px;
+  &__title-big{
+    z-index: 1;
+    bottom: 48px;
+  }
+  &__inner{
+    padding-left: 50px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__text-box{
+    margin-right: 50px;
+    z-index: 5;
+  }
+  &__accent{
+    @extend %montserrat-600;
+    font-size: 20px;
+    line-height: 24px;
+    color: $accent;
+    margin-bottom: 40px;
+  }
+  &__content{
+    z-index: 5;
+  }
+  &__content-title{
+    @extend %montserrat-500;
+    font-size: 19px;
+    line-height: 22px;
+    padding-bottom: 20px;
+    border-bottom: 3px solid $default;
+    margin-bottom: 35px;
+  }
+  &__list{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__list-item{
+    flex: 0 1 25%;
+    font-size: 15px;
+    text-transform: uppercase;
+    margin-right: 15px;
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+  &__list-img{
+    margin-bottom: 10px;
+  }
+}
+
 .gallery{
   padding: 65px 0 60px;
   &__title-big{
@@ -163,6 +224,7 @@
     line-height: 32px;
     margin-bottom: 60px;
   }
+  .slick-slide.slick-active,
   .slick-slide.slick-center{
     .gallery__img-blackout{
       background-color: rgba(0, 0, 0, 0);
@@ -192,7 +254,9 @@
     position: relative;
     transition: all .3s;
     pointer-events: none;
-    &:hover{
+    outline: none;
+    &:hover,
+    &:focus{
       box-shadow: 6px 7px 10px rgba(0,0,0,.3);
       transform: scale(1.01);
     }
@@ -238,57 +302,6 @@
   }
 }
 
-.stages{
-  background-color: $bg;
-  padding: 115px 0 47px;
-  &__title-big{
-    z-index: 1;
-    bottom: 48px;
-  }
-  &__inner{
-    padding-left: 50px;
-    display: flex;
-    justify-content: space-between;
-  }
-  &__text-box{
-    margin-right: 50px;
-    z-index: 5;
-  }
-  &__accent{
-    @extend %montserrat-600;
-    font-size: 20px;
-    line-height: 24px;
-    color: $accent;
-    margin-bottom: 40px;
-  }
-  &__content{
-    z-index: 5;
-  }
-  &__content-title{
-    @extend %montserrat-500;
-    font-size: 19px;
-    line-height: 22px;
-    padding-bottom: 20px;
-    border-bottom: 3px solid $default;
-    margin-bottom: 35px;
-  }
-  &__list{
-    display: flex;
-    justify-content: space-between;
-  }
-  &__list-item{
-    font-size: 15px;
-    text-transform: uppercase;
-    margin-right: 15px;
-    &:last-child{
-      margin-right: 0;
-    }
-  }
-  &__list-img{
-    margin-bottom: 10px;
-  }
-}
-
 .connection{
   background-color: $bg;
   padding: 50px 0 180px;
@@ -317,8 +330,13 @@
     margin-right: 23px;
     margin-bottom: 18px;
     background-color: transparent;
+    transition: all .3s;
     &:last-child{
       margin-right: 0;
+    }
+    &:focus{
+      outline: none;
+      transform: scale(1.01);
     }
   }
   &__form-btn{
@@ -330,6 +348,13 @@
     margin-bottom: 30px;
     border: none;
     background-color: transparent;
+    transition: all .3s;
+    opacity: .6;
+    &:hover,
+    &:focus{
+      outline: none;
+      opacity: 1;
+    }
   }
   &__form-btn-icon{
     background-image: url(../images/btn-attach.svg);
@@ -364,6 +389,10 @@
   background-position: 50% 90%;
   background-size: cover;
   min-height: 440px;
+  &__title-big{
+    z-index: 1;
+    bottom: 48px;
+  }
   &__inner{
     padding-left: 50px;
     position: relative;
@@ -392,6 +421,12 @@
       margin-bottom: 0;
     }
   }
+  &__phone-link{
+    outline: none;
+    &:focus{
+      text-shadow: 0 1px 1px rgba(0, 0, 0, .4);
+    }
+  }
   &__item-title{
     @extend %montserrat-600;
     font-size: 16px;
@@ -411,6 +446,10 @@
   &__item-mail{
     margin-bottom: 16px;
     display: block;
+    outline: none;
+    &:focus{
+      text-shadow: 0 1px 1px rgba(0, 0, 0, .4);
+    }
   }
   &__social-list{
     display: flex;
@@ -423,10 +462,12 @@
     }
   }
   &__social-link{
+    outline: none;
     path{
       transition: all .3s;
     }
-    &:hover{
+    &:hover,
+    &:focus{
       path{
         fill: $accent;
       }
@@ -463,6 +504,10 @@
   &__requisites-text{
     max-width: 130px;
   }
+  &__developer{
+    display: flex;
+    flex-direction: column;
+  }
   &__developer-logo{
     display: block;
     margin-bottom: 5px;
@@ -483,9 +528,17 @@
   &__title{
     margin-bottom: 10px;
   }
+  &__phone-link:focus{
+    outline: none;
+    text-shadow: 0 2px 2px rgba(255, 255, 255, .7);
+  }
   &__mail{
     display: block;
     margin-bottom: 14px;
+    outline: none;
+    &:focus{
+      text-shadow: 0 2px 2px rgba(255, 255, 255, .7);
+    }
   }
   &__social-list{
     display: flex;
@@ -497,12 +550,14 @@
     }
   }
   &__social-link{
+    outline: none;
     path{
       transition: all .3s;
     }
-    &:hover{
+    &:hover,
+    &:focus{
       path{
-        fill: $bg;
+        fill: $accent;
       }
     }
   }
