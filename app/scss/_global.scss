@@ -77,6 +77,12 @@ body{
   &--stages{
     transform: rotate(-90deg) translateX(-140%);
   }
+  &--contact{
+    transform: rotate(-90deg) translateX(-115%);
+  }
+  &--gallery{
+    transform: rotate(-90deg) translateX(-155%);
+  }
   &__box{
     position: relative;
   }
@@ -132,6 +138,9 @@ body{
   }
 }
 
+
+
+
 .slick-arrow{
   font-size: 0;
   border: none;
@@ -146,8 +155,9 @@ body{
 }
 
 .slick-prev{
-  left: 87%;
+  right: 136px;
   border-right: 12px solid #656565;
+  z-index: 5;
   &::before{
     position: absolute;
     content: '';
@@ -161,24 +171,25 @@ body{
 }
 
 .slick-next{
-  right: 9%;
+  right: 100px;
   border-left: 12px solid #656565;
 }
 
-
 .slick-prev.slick-disabled{
   border-right: 12px solid rgba($color: #656565, $alpha: .5);
+  cursor: default;
 }
 
 .slick-next.slick-disabled{
   border-left: 12px solid rgba($color: #656565, $alpha: .5);
+  cursor: default;
 }
 
 .slick-dots{
   display: flex;
   position: absolute;
   bottom: -90px;
-  right: 9%;
+  right: 110px;
   border-top: 1px solid rgba($color: #656565, $alpha: .2);
   font-size: 0;
   & button{
