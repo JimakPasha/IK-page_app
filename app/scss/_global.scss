@@ -1,0 +1,207 @@
+html,
+body{
+  height: 100%;
+}
+
+body{
+  color: $default;
+  font-size: 18px;
+  line-height: 22px;
+  @extend %montserrat-400;
+}
+
+
+.container{
+  max-width: 1950px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.breadcrumbs{
+  text-align: center;
+  &__list{
+    padding: 22px 0;
+    display: inline-flex;
+  }
+  &__item{
+    font-size: 16px;
+    line-height: 20px;
+    position: relative;
+    padding-right: 20px;
+    &::after{
+      content: '/';
+      position: absolute;
+      right: 8px;
+      top: 0;
+    }
+    &:last-child{
+      @extend %montserrat-600;
+      padding-right: 0;
+      &::after{
+        display: none;
+      }
+    }
+  }
+  &__link{
+    color: inherit;
+  }
+  &__img-box{
+    position: relative;
+  }
+  &__img{
+    width: 100%;
+    object-fit: cover;
+  }
+  &__title{
+    font-size: 24px;
+    line-height: 28px;
+    @extend %montserrat-500;
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: $bg;
+    max-width: 244px;
+    width: 100%;
+    padding-top: 27px;
+  }
+}
+
+.blok-name{
+  position: absolute;
+  @extend %montserrat-500;
+  display: inline-flex;
+  left: -10px;
+  transform-origin: top left;
+  transform: rotate(-90deg) translateX(-100%);
+  &--stages{
+    transform: rotate(-90deg) translateX(-140%);
+  }
+  &--contact{
+    transform: rotate(-90deg) translateX(-115%);
+  }
+  &--gallery{
+    transform: rotate(-90deg) translateX(-155%);
+  }
+  &__box{
+    position: relative;
+  }
+  &__number{
+    margin-right: 85px;
+    position: relative;
+    &::after{
+      content: '';
+      position: absolute;
+      right: -70px;
+      bottom: 4px;
+      width: 55px;
+      height: 4px;
+      padding: 0 18px;
+      background-color: $accent;
+    }
+  }
+  &__title{
+    font-size: 18px;
+  }
+}
+
+.img-decor{
+  position: relative;
+  &::before{
+    content: '';
+    position: absolute;
+    top: -1px;
+    right: 0;
+    width: 42%;
+    height: 4px;
+    background-color: $accent;
+  }
+}
+
+.ibg{
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.title{
+  @extend %montserrat-500;
+  color: #E4E4E4;
+  font-size: 140px;
+  letter-spacing: 2px;
+  position: absolute;
+  right: -11px;
+  bottom: 18px;
+  z-index: -1;
+  &__box{
+    position: relative;
+  }
+}
+
+
+
+
+.slick-arrow{
+  font-size: 0;
+  border: none;
+  position: absolute;
+  background-color: transparent;
+  top: 136px;
+  cursor: pointer;
+  width: 0;
+  height: 0;
+  border-bottom: 10px solid transparent;
+  border-top: 10px solid transparent;
+}
+
+.slick-prev{
+  right: 136px;
+  border-right: 12px solid #656565;
+  z-index: 5;
+  &::before{
+    position: absolute;
+    content: '';
+    width: 3px;
+    height: 22px;
+    background-color: #f33632;
+    right: -19px;
+    bottom: -10px;
+    pointer-events: none;
+  }
+}
+
+.slick-next{
+  right: 100px;
+  border-left: 12px solid #656565;
+}
+
+.slick-prev.slick-disabled{
+  border-right: 12px solid rgba($color: #656565, $alpha: .5);
+  cursor: default;
+}
+
+.slick-next.slick-disabled{
+  border-left: 12px solid rgba($color: #656565, $alpha: .5);
+  cursor: default;
+}
+
+.slick-dots{
+  display: flex;
+  position: absolute;
+  bottom: -90px;
+  right: 110px;
+  border-top: 1px solid rgba($color: #656565, $alpha: .2);
+  font-size: 0;
+  & button{
+    border: none;
+    width: 60px;
+    height: 3px;
+    background-color: transparent;
+    transform: translateY(-1px);
+    transition: all .3s;
+  }
+}
+
+.slick-active button{
+  background-color: $accent;
+}
