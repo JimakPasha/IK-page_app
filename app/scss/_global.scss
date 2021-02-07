@@ -8,14 +8,21 @@ body{
   font-size: 18px;
   line-height: 22px;
   @extend %montserrat-400;
+  display: flex;
+  flex-direction: column;
 }
 
+.main{
+  flex-grow: 1;
+  margin-top: 68px;
+}
 
 .container{
   max-width: 1950px;
   padding: 0 15px;
   margin: 0 auto;
 }
+
 
 .breadcrumbs{
   text-align: center;
@@ -44,6 +51,10 @@ body{
   }
   &__link{
     color: inherit;
+    outline: none;
+    &:focus{
+      text-shadow: 0 0 1px rgba(0, 0, 0, .4);
+    }
   }
   &__img-box{
     position: relative;
@@ -57,7 +68,7 @@ body{
     line-height: 28px;
     @extend %montserrat-500;
     position: absolute;
-    bottom: -1px;
+    bottom: -2px;
     left: 50%;
     transform: translateX(-50%);
     background-color: $bg;
@@ -145,6 +156,7 @@ body{
   font-size: 0;
   border: none;
   position: absolute;
+  z-index: 5;
   background-color: transparent;
   top: 136px;
   cursor: pointer;
@@ -152,12 +164,12 @@ body{
   height: 0;
   border-bottom: 10px solid transparent;
   border-top: 10px solid transparent;
+  outline: none;
 }
 
 .slick-prev{
-  right: 136px;
+  right: 135px;
   border-right: 12px solid #656565;
-  z-index: 5;
   &::before{
     position: absolute;
     content: '';
@@ -167,12 +179,19 @@ body{
     right: -19px;
     bottom: -10px;
     pointer-events: none;
+    &:focus{
+      border-right: 12px solid #000;
+    }
   }
 }
 
 .slick-next{
+  -moz-transform: translateX(4px);
   right: 100px;
   border-left: 12px solid #656565;
+  &:focus{
+    border-left: 12px solid #000;
+  }
 }
 
 .slick-prev.slick-disabled{
@@ -204,4 +223,9 @@ body{
 
 .slick-active button{
   background-color: $accent;
+  outline: none;
+  transition: all .3;
+  &:focus{
+    transform: scale(1.09);
+  }
 }

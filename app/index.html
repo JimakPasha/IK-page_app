@@ -17,6 +17,7 @@
           <img class="logo__img" src="images/logo.png" alt="лого">
         </a>
         <nav class="menu">
+          <button class="menu__btn"><span></span></button>
           <ul class="menu__list">
             <li class="menu__list-item">
               <a class="menu__list-link" href="#">
@@ -24,12 +25,12 @@
               </a>
             </li>
             <li class="menu__list-item">
-              <a class="menu__list-link menu__list-link--active" href="#">
+              <a class="menu__list-link" href="#">
                 Каталог продукции
               </a>
             </li>
             <li class="menu__list-item">
-              <a class="menu__list-link" href="#">
+              <a class="menu__list-link menu__list-link--active" href="#">
                 О нас
               </a>
             </li>
@@ -50,7 +51,6 @@
             </li>
           </ul>
         </nav>
-
       </div>
     </div>
   </header>
@@ -137,6 +137,9 @@
 
     <section class="advantages">
       <div class="container">
+        <h4 class="advantages__title">
+          Наши преимущества
+        </h4>
         <div class="blok-name__box">
           <div class="blok-name">
             <span class="blok-name__number">
@@ -235,7 +238,6 @@
             </div>
           </div>
         </div>
-      </div>
       </div>
     </section>
 
@@ -446,7 +448,7 @@
                 </a>
                 <div class="gallery__item-content">
                   <h5 class="gallery__item-title">
-                    ВОКЗАЛ МИНСК - ПАССАЖИРСКИЙ
+                    СТАДИОН "БОРИСОВ АРЕНА"
                   </h5>
                   <div class="gallery__item-text-wrapper">
                     <p class="gallery__item-text">
@@ -504,65 +506,7 @@
                 </a>
                 <div class="gallery__item-content">
                   <h5 class="gallery__item-title">
-                    ВОКЗАЛ МИНСК - ПАССАЖИРСКИЙ
-                  </h5>
-                  <div class="gallery__item-text-wrapper">
-                    <p class="gallery__item-text">
-                      Все двери изготавливаются по индивидуальным заказам, с учетом всех пожеланий клиента, начиная от
-                      цвета
-                      и
-                      заканчивая
-                      возможностью монтажа
-                    </p>
-                    <p class="gallery__item-text">
-                      Все двери изготавливаются по индивидуальным заказам, с учетом всех пожеланий клиента, начиная от
-                      цвета
-                      и
-                      заканчивая
-                      возможностью монтажа
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="gallery__slider-item">
-              <div class="gallery__item">
-                <a class="gallery__item-img ibg" href="#" style="background-image: url(images/gallery/gallery-1.jpg);">
-                  <div class="gallery__img-blackout">
-                  </div>
-                </a>
-                <div class="gallery__item-content">
-                  <h5 class="gallery__item-title">
                     СТАДИОН "БОРИСОВ АРЕНА"
-                  </h5>
-                  <div class="gallery__item-text-wrapper">
-                    <p class="gallery__item-text">
-                      Все двери изготавливаются по индивидуальным заказам, с учетом всех пожеланий клиента, начиная от
-                      цвета
-                      и
-                      заканчивая
-                      возможностью монтажа
-                    </p>
-                    <p class="gallery__item-text">
-                      Все двери изготавливаются по индивидуальным заказам, с учетом всех пожеланий клиента, начиная от
-                      цвета
-                      и
-                      заканчивая
-                      возможностью монтажа
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="gallery__slider-item">
-              <div class="gallery__item">
-                <a class="gallery__item-img ibg" href="#" style="background-image: url(images/gallery/gallery-1.jpg);">
-                  <div class="gallery__img-blackout">
-                  </div>
-                </a>
-                <div class="gallery__item-content">
-                  <h5 class="gallery__item-title">
-                    ВОКЗАЛ МИНСК - ПАССАЖИРСКИЙ
                   </h5>
                   <div class="gallery__item-text-wrapper">
                     <p class="gallery__item-text">
@@ -591,9 +535,9 @@
     <section class="connection">
       <div class="container">
         <form class="connection__form" action="#">
-          <p class="connection__form-text">
+          <h6 class="connection__form-title">
             Вы можете задать нам любой вопрос и наши специалисты проконсультируют Вас в удобное для Вас время
-          </p>
+          </h6>
           <div class="connection__form-box">
             <input class="connection__form-input" type="text" placeholder="Ваше имя">
             <input class="connection__form-input connection__form-input--phone" type="tel"
@@ -612,7 +556,7 @@
     <section class="contact" style="background-image: url(images/map.jpg);">
       <div class="container">
         <div class="title__box">
-          <h3 class="stages__title-big title">
+          <h3 class="contact__title-big title">
             contact
           </h3>
         </div>
@@ -779,7 +723,7 @@
             </p>
             <div class="footer-bottom__developer">
               <a class="footer-bottom__developer-logo" href="#">
-                <img class="footer-bottom__developer-img" src="images/developer-logo.svg" alt="лого разработчика">
+                <img class="footer-bottom__developer-img" src="images/logo-developer.svg" alt="лого разработчика">
               </a>
               <p class="footer-bottom__developer-text">
                 Разработка и продвижение:
@@ -840,7 +784,7 @@
                     <svg width="14" height="14" viewBox="0 0 20 20" fill="none">
                       <path
                         d="M13.3303 3.32083H15.1561V0.140833C14.8411 0.0975 13.7578 0 12.4961 0C9.86361 0 8.06027 1.65583 8.06027 4.69917V7.5H5.15527V11.055H8.06027V20H11.6219V11.0558H14.4094L14.8519 7.50083H11.6211V5.05167C11.6219 4.02417 11.8986 3.32083 13.3303 3.32083Z"
-                        fill="#2F2F2F" />
+                        fill="#fff" />
                     </svg>
                   </a>
                 </li>
@@ -849,7 +793,7 @@
                     <svg width="14" height="14" viewBox="0 0 20 20" fill="none">
                       <path
                         d="M16.5958 10.8565C16.2725 10.4482 16.365 10.2665 16.5958 9.9015C16.6 9.89734 19.2692 6.209 19.5442 4.95817L19.5458 4.95734C19.6825 4.5015 19.5458 4.1665 18.885 4.1665H16.6983C16.1417 4.1665 15.885 4.454 15.7475 4.77567C15.7475 4.77567 14.6342 7.44067 13.0592 9.16817C12.5508 9.66734 12.3158 9.82734 12.0383 9.82734C11.9017 9.82734 11.6892 9.66734 11.6892 9.2115V4.95734C11.6892 4.41067 11.5333 4.1665 11.0725 4.1665H7.63417C7.285 4.1665 7.0775 4.4215 7.0775 4.659C7.0775 5.17734 7.865 5.2965 7.94667 6.75484V9.919C7.94667 10.6123 7.82083 10.7398 7.54167 10.7398C6.79833 10.7398 4.99417 8.064 3.925 5.0015C3.70917 4.40734 3.49833 4.16734 2.9375 4.16734H0.75C0.125833 4.16734 0 4.45484 0 4.7765C0 5.34484 0.743333 8.17067 3.45667 11.904C5.265 14.4523 7.81167 15.8332 10.1283 15.8332C11.5208 15.8332 11.6908 15.5265 11.6908 14.999C11.6908 12.564 11.565 12.334 12.2625 12.334C12.5858 12.334 13.1425 12.494 14.4425 13.7232C15.9283 15.1807 16.1725 15.8332 17.0042 15.8332H19.1908C19.8142 15.8332 20.13 15.5265 19.9483 14.9215C19.5325 13.649 16.7225 11.0315 16.5958 10.8565V10.8565Z"
-                        fill="#2F2F2F" />
+                        fill="#fff" />
                     </svg>
                   </a>
                 </li>
@@ -858,13 +802,13 @@
                     <svg width="14" height="14" viewBox="0 0 20 20" fill="none">
                       <path
                         d="M13.75 0H6.25C2.79875 0 0 2.79875 0 6.25V13.75C0 17.2013 2.79875 20 6.25 20H13.75C17.2013 20 20 17.2013 20 13.75V6.25C20 2.79875 17.2013 0 13.75 0ZM18.125 13.75C18.125 16.1625 16.1625 18.125 13.75 18.125H6.25C3.8375 18.125 1.875 16.1625 1.875 13.75V6.25C1.875 3.8375 3.8375 1.875 6.25 1.875H13.75C16.1625 1.875 18.125 3.8375 18.125 6.25V13.75Z"
-                        fill="#2F2F2F" />
+                        fill="#fff" />
                       <path
                         d="M10 5C7.23875 5 5 7.23875 5 10C5 12.7613 7.23875 15 10 15C12.7613 15 15 12.7613 15 10C15 7.23875 12.7613 5 10 5ZM10 13.125C8.2775 13.125 6.875 11.7225 6.875 10C6.875 8.27625 8.2775 6.875 10 6.875C11.7225 6.875 13.125 8.27625 13.125 10C13.125 11.7225 11.7225 13.125 10 13.125Z"
-                        fill="#2F2F2F" />
+                        fill="#fff" />
                       <path
                         d="M15.3752 5.29148C15.7432 5.29148 16.0415 4.99319 16.0415 4.62523C16.0415 4.25727 15.7432 3.95898 15.3752 3.95898C15.0073 3.95898 14.709 4.25727 14.709 4.62523C14.709 4.99319 15.0073 5.29148 15.3752 5.29148Z"
-                        fill="#2F2F2F" />
+                        fill="#fff" />
                     </svg>
                   </a>
                 </li>
@@ -875,8 +819,6 @@
       </div>
     </div>
   </footer>
-
-
 
   <script src="js/main.min.js"></script>
 </body>
