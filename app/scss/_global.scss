@@ -179,9 +179,9 @@ body{
     right: -19px;
     bottom: -10px;
     pointer-events: none;
-    &:focus{
-      border-right: 12px solid #000;
-    }
+  }
+  &:focus{
+    border-right: 12px solid #000;
   }
 }
 
