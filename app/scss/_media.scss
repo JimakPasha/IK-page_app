@@ -12,6 +12,95 @@
   .title{
     font-size: 100px;
   }
+  .header{
+    &.active{
+      background-color: $bg;
+    }
+    .menu{
+      &__btn{
+        width: 40px;
+        height: 23px;
+        border: none;
+        background-color: transparent;
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding: 0;
+        z-index: 10;
+        cursor: pointer;
+        outline: none;
+        &::after,
+        &::before,
+        span{
+          width: 100%;
+          height: 3px;
+          background-color: $default;
+          transition: all .3s;
+        }
+        &::before,
+        &::after{
+          position: absolute;
+          content: '';
+          left: 0;
+        }
+        &::before{
+          top: 0;
+        }
+        &::after{
+          bottom: 0;
+        }
+        &.active span{
+          transform: scale(0);
+        }
+        &.active::after{
+          transform: rotate(-45deg);
+          bottom: 15px;
+        }
+        &.active::before{
+          transform: rotate(45deg);
+          top: 6px;
+        }
+      }
+      &__list{
+        overflow: auto;
+        flex-wrap: nowrap;
+        transform: translateY(-200%);
+        transition: all .3s;
+        text-align: center;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 65px;
+        flex-direction: column;
+        background-color: $bg;
+        color: $default;
+        z-index: 5;
+        height: 100vh;
+        &.active{
+          transform: translateY(0%);
+        }
+      }
+      &__list-link{
+        display: block;
+        width: 100%;
+        font-size: 20px;
+        padding: 18px 0;
+      }
+      &__list-link--active{
+        border:none;
+        text-decoration: overline $accent;
+      }
+      &__list-item{
+        margin: 0;
+      }
+    }
+    .logo{
+      z-index: 10;
+    }
+  }
+  body.lock{
+    overflow: hidden;
+  }
   .partners{
     &__item{
       max-width: 190px;
@@ -70,13 +159,14 @@
     }
     .menu__list-item {
       margin-right: 0;
+      padding: 5px 0;
     }
     .menu__list-link{
       padding-right: 0;
     }
     .logo{
       margin-bottom: 20px;
-      margin-left: -11px;
+      margin-left: 29px;
     }
   }
   .footer-bottom{
@@ -256,9 +346,8 @@
     &__inner{
       padding-left: 25px;
     }
-    &__item-img{
-      min-height: auto;
-      height: 200px;
+    &__item{
+      flex-direction: column;
     }
     &__item-text-wrapper{
       margin-top: 15px;
@@ -376,6 +465,9 @@
     .gallery{
     &__title-big{
       bottom: -85px;
+    }
+    .slick-dots{
+      bottom: -10%;
     }
   }
   .contact{

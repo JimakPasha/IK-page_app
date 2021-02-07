@@ -8,14 +8,21 @@ body{
   font-size: 18px;
   line-height: 22px;
   @extend %montserrat-400;
+  display: flex;
+  flex-direction: column;
 }
 
+.main{
+  flex-grow: 1;
+  margin-top: 68px;
+}
 
 .container{
   max-width: 1950px;
   padding: 0 15px;
   margin: 0 auto;
 }
+
 
 .breadcrumbs{
   text-align: center;
@@ -157,6 +164,7 @@ body{
   height: 0;
   border-bottom: 10px solid transparent;
   border-top: 10px solid transparent;
+  outline: none;
 }
 
 .slick-prev{
@@ -171,12 +179,18 @@ body{
     right: -19px;
     bottom: -10px;
     pointer-events: none;
+    &:focus{
+      border-right: 12px solid #000;
+    }
   }
 }
 
 .slick-next{
   right: 100px;
   border-left: 12px solid #656565;
+  &:focus{
+    border-left: 12px solid #000;
+  }
 }
 
 .slick-prev.slick-disabled{
@@ -208,4 +222,9 @@ body{
 
 .slick-active button{
   background-color: $accent;
+  outline: none;
+  transition: all .3;
+  &:focus{
+    transform: scale(1.09);
+  }
 }

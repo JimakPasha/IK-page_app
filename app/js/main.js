@@ -43,8 +43,8 @@ $(function () {
     dots: true,
     waitForAnimate: false,
     centerMode: true,
-    // autoplay: true,
-    // autoplaySpeed: 3500
+    autoplay: true,
+    autoplaySpeed: 3500,
     responsive: [
       {
         breakpoint: 1025,
@@ -56,5 +56,10 @@ $(function () {
   });
 
   $('.connection__form-input--phone').mask('+ 375 ( 9 9 ) 9 9 9 - 9 9 - 9 9');
+
+  $('.menu__btn').on('click', function () {
+    $('.menu__list,.menu__btn,.header').toggleClass('active');
+    $('body').toggleClass('lock');
+  });
 
 });
