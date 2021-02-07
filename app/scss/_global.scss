@@ -168,7 +168,7 @@ body{
 }
 
 .slick-prev{
-  right: 136px;
+  right: 135px;
   border-right: 12px solid #656565;
   &::before{
     position: absolute;
@@ -186,6 +186,7 @@ body{
 }
 
 .slick-next{
+  -moz-transform: translateX(4px);
   right: 100px;
   border-left: 12px solid #656565;
   &:focus{

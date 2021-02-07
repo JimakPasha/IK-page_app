@@ -327,11 +327,14 @@
     font-size: 16px;
     line-height: 18px;
     margin: 0 auto;
-    max-width: 650px;
-    padding: 21px 52px;
+    max-width: 661px;
+    padding: 21px 48px;
     border: 3px solid $default;
   }
-  &__form-text{
+  &__form-title{
+    font-size: 18px;
+    line-height: 22px;
+    @extend %montserrat-400;
     text-align: center;
     margin-bottom: 32px;
   }
